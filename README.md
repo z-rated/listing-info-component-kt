@@ -1,13 +1,12 @@
-# Project Name
+# Restaurant Info Module
 
-> Project description
+> Recreating the restaurant info module from the item page on Zagat.com.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/the-notorious-f-e-c/zagat-photos-service
+  - https://github.com/the-notorious-f-e-c/zagat-google-reviews
+  - https://github.com/the-notorious-f-e-c/zagat-reviews
 
 ## Table of Contents
 
