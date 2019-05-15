@@ -5,7 +5,10 @@ let { urls, coords, addresses, phoneNumbers, hours } = require('./data.js');
 
 let restaurantSchema = new Schema({
     id: Number,
-    location: { address: String, coordinates: String },
+    location: {
+        address: String,
+        coords: String
+    },
     phone: String,
     website: String,
     hours: {
@@ -22,31 +25,37 @@ let restaurantSchema = new Schema({
 var Restaurant = mongoose.model('restaurants', restaurantSchema);
 
 //GENERATE RANDOM DATA USING IMPORTED DATA PIECES
-let data = [];
+(function () {
+    let data = [];
 
-for (let i = 0; i < 100; i++) {
-    data.push({
-        id: i,
-        location: {
-            address: addresses[i],
-            coords: coords[i]
-        },
-        phone: phoneNumbers[i],
-        website: urls[i],
-        hours: hours[i]
-    });
-}
-//END
-
-mongoose.connection.collections['restaurants'].drop(function (err) {
-    if (err) { console.log(err) }
-    console.log('\nRESTAURANTS COLLECTION DROPPED.');
-});
-
-//INSERT DATA INTO DB
-Restaurant.insertMany(data, (err) => {
-    if (err) {
-        console.log(err);
+    for (let i = 0; i < 100; i++) {
+        data.push({
+            id: i,
+            location: {
+                address: addresses[i],
+                coords: coords[i]
+            },
+            phone: phoneNumbers[i],
+            website: urls[i],
+            hours: hours[i]
+        });
     }
-    console.log('DB seeded!')
-});
+    //END
+
+    console.log(data);
+
+    mongoose.connection.collections['restaurants'].drop(function (err) {
+        if (err) { console.log(err) }
+        console.log('\nRESTAURANTS COLLECTION DROPPED.');
+    });
+
+    //INSERT DATA INTO DB
+    Restaurant.insertMany(data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('DB seeded!')
+    });
+})()
+
+module.exports = Restaurant
