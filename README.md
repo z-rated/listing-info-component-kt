@@ -16,7 +16,7 @@
 
 ## Usage
 
-> Some usage instructions
+> With MongoDB installed, run: 'npm run seed' to seed database with random data.
 
 ## Requirements
 
