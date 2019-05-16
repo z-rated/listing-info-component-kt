@@ -1,105 +1,105 @@
-let urls = [ 'http://www.thetable.com',
-'http://www.grandmashouse.com',
-'http://www.grandmaskitchen.com',
-'http://www.theloot.com',
-'http://www.thebull.com',
-'http://www.thebullfighter.com',
-'http://www.themussel.com',
-'http://www.beautifuldeliciousandcheap.com',
-'http://www.thereef.com',
-'http://www.mymommyskitchen.com',
-'http://www.kitchen.com',
-'http://www.thesecretgarden.com',
-'http://www.ourfriendthechef.com',
-'http://www.pleasure.com',
-'http://www.theexcellentimpression.com',
-'http://www.thescoundrelstavern.com',
-'http://www.omeplacesspecializeinthese.com',
-'http://www.themarketplace.com',
-'http://www.naturallydelicious.com',
-'http://www.crazypizza.com',
-'http://www.thegourmet.com',
-'http://www.thecathedral.com',
-'http://www.toomuch.com',
-'http://www.theshopofflavors.com',
-'http://www.thehouseofflavors.com',
-'http://www.thekitchengarden.com',
-'http://www.thetavern.com',
-'http://www.landandsea.com',
-'http://www.seaandmountain.com',
-'http://www.seatastetasteofthesea.com',
-'http://www.thepirate.com',
-'http://www.unreal.com',
-'http://www.thefisherman.com',
-'http://www.thecurtain.com',
-'http://www.theseafarers.com',
-'http://www.thegrill.com',
-'http://www.bowling.com',
-'http://www.theball.com',
-'http://www.ancientflavors.com',
-'http://www.oldflavor.com',
-'http://www.thepan.com',
-'http://www.thericemakers.com',
-'http://www.thedaggerboard.com',
-'http://www.thegoodtaste.com',
-'http://www.piggish.com',
-'http://www.thegossipmill.com',
-'http://www.theflourmill.com',
-'http://www.theartofflavors.com',
-'http://www.basil.com',
-'http://www.thebridge.com',
-'http://www.thespell.com',
-'http://www.thesinofgluttony.com',
-'http://www.sin.com',
-'http://www.innocentgluttony.com',
-'http://www.greed.com',
-'http://www.theroosterandthemoon.com',
-'http://www.thecorneroftastes.com',
-'http://www.nook.com',
-'http://www.thehermit.com',
-'http://www.thehermitage.com',
-'http://www.grandmasplace.com',
-'http://www.grandmashouse.com',
-'http://www.thesouthernwindow.com',
-'http://www.thewindow.com',
-'http://www.themansion.com',
-'http://www.delicious.com',
-'http://www.craving.com',
-'http://www.intheoven.com',
-'http://www.bakeddelicacies.com',
-'http://www.therock.com',
-'http://www.thegalician.com',
-'http://www.truetastes.com',
-'http://www.theparapet.com',
-'http://www.theshed.com',
-'http://www.thetree.com',
-'http://www.oldmadrid.com',
-'http://www.thelittletavern.com',
-'http://www.clover.com',
-'http://www.theport.com',
-'http://www.crab.com',
-'http://www.lobster.com',
-'http://www.thestove.com',
-'http://www.marzipan.com',
-'http://www.theoldrestaurant.com',
-'http://www.thefridge.com',
-'http://www.aroma.com',
-'http://www.thepalate.com',
-'http://www.thecost.com',
-'http://www.thebay.com',
-'http://www.theabbey.com',
-'http://www.thecompass.com',
-'http://www.virtues.com',
-'http://www.smallhouse.com',
-'http://www.cave.com',
-'http://www.thefourtimes.com',
-'http://www.hackreactorkitchen.com',
-'http://www.gariagi.com',
-'http://www.shabuclub.com',
-'http://www.thirstybear.com',
-'http://www.localedition.com' ];
+const urls = ['http://www.thetable.com',
+  'http://www.grandmashouse.com',
+  'http://www.grandmaskitchen.com',
+  'http://www.theloot.com',
+  'http://www.thebull.com',
+  'http://www.thebullfighter.com',
+  'http://www.themussel.com',
+  'http://www.beautifuldeliciousandcheap.com',
+  'http://www.thereef.com',
+  'http://www.mymommyskitchen.com',
+  'http://www.kitchen.com',
+  'http://www.thesecretgarden.com',
+  'http://www.ourfriendthechef.com',
+  'http://www.pleasure.com',
+  'http://www.theexcellentimpression.com',
+  'http://www.thescoundrelstavern.com',
+  'http://www.omeplacesspecializeinthese.com',
+  'http://www.themarketplace.com',
+  'http://www.naturallydelicious.com',
+  'http://www.crazypizza.com',
+  'http://www.thegourmet.com',
+  'http://www.thecathedral.com',
+  'http://www.toomuch.com',
+  'http://www.theshopofflavors.com',
+  'http://www.thehouseofflavors.com',
+  'http://www.thekitchengarden.com',
+  'http://www.thetavern.com',
+  'http://www.landandsea.com',
+  'http://www.seaandmountain.com',
+  'http://www.seatastetasteofthesea.com',
+  'http://www.thepirate.com',
+  'http://www.unreal.com',
+  'http://www.thefisherman.com',
+  'http://www.thecurtain.com',
+  'http://www.theseafarers.com',
+  'http://www.thegrill.com',
+  'http://www.bowling.com',
+  'http://www.theball.com',
+  'http://www.ancientflavors.com',
+  'http://www.oldflavors.com',
+  'http://www.thepan.com',
+  'http://www.thericemakers.com',
+  'http://www.thedaggerboard.com',
+  'http://www.thegoodtaste.com',
+  'http://www.piggish.com',
+  'http://www.thegossipmill.com',
+  'http://www.theflourmill.com',
+  'http://www.theartofflavors.com',
+  'http://www.basil.com',
+  'http://www.thebridge.com',
+  'http://www.thespell.com',
+  'http://www.thesinofgluttony.com',
+  'http://www.sin.com',
+  'http://www.innocentgluttony.com',
+  'http://www.greed.com',
+  'http://www.theroosterandthemoon.com',
+  'http://www.thecorneroftastes.com',
+  'http://www.nook.com',
+  'http://www.thehermit.com',
+  'http://www.thehermitage.com',
+  'http://www.grandmasplace.com',
+  'http://www.grandmashouse.com',
+  'http://www.thesouthernwindow.com',
+  'http://www.thewindow.com',
+  'http://www.themansion.com',
+  'http://www.delicious.com',
+  'http://www.craving.com',
+  'http://www.intheoven.com',
+  'http://www.bakeddelicacies.com',
+  'http://www.therock.com',
+  'http://www.thegalician.com',
+  'http://www.truetastes.com',
+  'http://www.theparapet.com',
+  'http://www.theshed.com',
+  'http://www.thetree.com',
+  'http://www.oldmadrid.com',
+  'http://www.thelittletavern.com',
+  'http://www.clover.com',
+  'http://www.theport.com',
+  'http://www.crab.com',
+  'http://www.lobster.com',
+  'http://www.thestove.com',
+  'http://www.marzipan.com',
+  'http://www.theoldrestaurant.com',
+  'http://www.thefridge.com',
+  'http://www.aroma.com',
+  'http://www.thepalate.com',
+  'http://www.thecost.com',
+  'http://www.thebay.com',
+  'http://www.theabbey.com',
+  'http://www.thecompass.com',
+  'http://www.virtues.com',
+  'http://www.smallhouse.com',
+  'http://www.cave.com',
+  'http://www.thefourtimes.com',
+  'http://www.hackreactorkitchen.com',
+  'http://www.gariagi.com',
+  'http://www.shabuclub.com',
+  'http://www.thirstybear.com',
+  'http://www.localedition.com'];
 
-let coords = ['37.77621299217993° N, 122.39941299217992° W',
+const coords = ['37.77621299217993° N, 122.39941299217992° W',
   '37.77743268907223° N, 122.40063268907222° W',
   '37.783316734248295° N, 122.40651673424829° W',
   '37.78108749488452° N, 122.40428749488451° W',
@@ -198,9 +198,9 @@ let coords = ['37.77621299217993° N, 122.39941299217992° W',
   '37.78195392809241° N, 122.4051539280924° W',
   '37.774146091625255° N, 122.39734609162525° W',
   '37.774299204443246° N, 122.39749920444324° W',
-  '37.77387015579809° N, 122.39707015579809° W']
+  '37.77387015579809° N, 122.39707015579809° W'];
 
-let addresses = ['8452 Union Street Folsom, CA 95630',
+const addresses = ['8452 Union Street Folsom, CA 95630',
   '7903 Rockwell Ave. Watsonville, CA 95076',
   '59 N. Carson Drive Victorville, CA 92392',
   '71 Addison Rd. Bakersfield, CA 93306',
@@ -301,7 +301,7 @@ let addresses = ['8452 Union Street Folsom, CA 95630',
   '8827 Edgemont Circle Chula Vista, CA 91910',
   '651 Sutor Street Bakersfield, CA 93307'];
 
-let phoneNumbers = ['(834) 394-6382',
+const phoneNumbers = ['(834) 394-6382',
   '(383) 490-9534',
   '(544) 968-1515',
   '(659) 548-6954',
@@ -400,16 +400,16 @@ let phoneNumbers = ['(834) 394-6382',
   '(865) 367-9968',
   '(575) 333-6326',
   '(624) 906-7988',
-  '(531) 650-4602']
+  '(531) 650-4602'];
 
-let hours = [{
+const hours = [{
   Monday: { open: 8, close: 8 },
   Tuesday: { open: 8, close: 10 },
   Wednesday: { open: 7, close: 7 },
   Thursday: { open: 7, close: 9 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 8, close: 9 }
+  Sunday: { open: 8, close: 9 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -418,7 +418,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 6, close: 9 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 7, close: 7 },
@@ -427,7 +427,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 6, close: 9 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 6, close: 10 },
@@ -436,7 +436,7 @@ let hours = [{
   Thursday: { open: 6, close: 9 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -445,7 +445,7 @@ let hours = [{
   Thursday: { open: 6, close: 9 },
   Friday: { open: 8, close: 8 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 7, close: 10 }
+  Sunday: { open: 7, close: 10 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -454,7 +454,7 @@ let hours = [{
   Thursday: { open: 5, close: 8 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 5, close: 10 },
@@ -463,7 +463,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 8, close: 7 },
   Saturday: { open: 8, close: 9 },
-  Sunday: { open: 7, close: 8 }
+  Sunday: { open: 7, close: 8 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -472,7 +472,7 @@ let hours = [{
   Thursday: { open: 6, close: 10 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 5, close: 7 }
+  Sunday: { open: 5, close: 7 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -481,7 +481,7 @@ let hours = [{
   Thursday: { open: 5, close: 7 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -490,7 +490,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -499,7 +499,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 6, close: 9 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 6, close: 8 },
@@ -508,7 +508,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 8, close: 8 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 5, close: 8 },
@@ -517,7 +517,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 5, close: 9 },
@@ -526,7 +526,7 @@ let hours = [{
   Thursday: { open: 6, close: 9 },
   Friday: { open: 7, close: 9 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 8 }
+  Sunday: { open: 5, close: 8 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -535,7 +535,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 5, close: 7 }
+  Sunday: { open: 5, close: 7 },
 },
 {
   Monday: { open: 5, close: 10 },
@@ -544,7 +544,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -553,7 +553,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 6, close: 8 },
@@ -562,7 +562,7 @@ let hours = [{
   Thursday: { open: 5, close: 8 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 8, close: 8 }
+  Sunday: { open: 8, close: 8 },
 },
 {
   Monday: { open: 7, close: 8 },
@@ -571,7 +571,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 7, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -580,7 +580,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 7, close: 9 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 5, close: 10 },
@@ -589,7 +589,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 6, close: 7 }
+  Sunday: { open: 6, close: 7 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -598,7 +598,7 @@ let hours = [{
   Thursday: { open: 7, close: 10 },
   Friday: { open: 7, close: 9 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -607,7 +607,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 7, close: 7 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 7, close: 10 }
+  Sunday: { open: 7, close: 10 },
 },
 {
   Monday: { open: 6, close: 10 },
@@ -616,7 +616,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 6, close: 7 }
+  Sunday: { open: 6, close: 7 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -625,7 +625,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 5, close: 10 },
@@ -634,7 +634,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 7, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -643,7 +643,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 6, close: 9 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -652,7 +652,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 7, close: 9 }
+  Sunday: { open: 7, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -661,7 +661,7 @@ let hours = [{
   Thursday: { open: 6, close: 7 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -670,7 +670,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 7, close: 10 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -679,7 +679,7 @@ let hours = [{
   Thursday: { open: 8, close: 10 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -688,7 +688,7 @@ let hours = [{
   Thursday: { open: 5, close: 8 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 5, close: 8 }
+  Sunday: { open: 5, close: 8 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -697,7 +697,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 8, close: 8 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -706,7 +706,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 8, close: 7 },
   Saturday: { open: 6, close: 9 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -715,7 +715,7 @@ let hours = [{
   Thursday: { open: 6, close: 10 },
   Friday: { open: 8, close: 7 },
   Saturday: { open: 8, close: 9 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -724,7 +724,7 @@ let hours = [{
   Thursday: { open: 7, close: 10 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 7, close: 8 }
+  Sunday: { open: 7, close: 8 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -733,7 +733,7 @@ let hours = [{
   Thursday: { open: 6, close: 7 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -742,7 +742,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -751,7 +751,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 8, close: 9 }
+  Sunday: { open: 8, close: 9 },
 },
 {
   Monday: { open: 7, close: 8 },
@@ -760,7 +760,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 8, close: 9 },
-  Sunday: { open: 7, close: 9 }
+  Sunday: { open: 7, close: 9 },
 },
 {
   Monday: { open: 5, close: 10 },
@@ -769,7 +769,7 @@ let hours = [{
   Thursday: { open: 8, close: 10 },
   Friday: { open: 6, close: 9 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 7, close: 9 }
+  Sunday: { open: 7, close: 9 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -778,7 +778,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 6, close: 9 },
   Saturday: { open: 7, close: 7 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -787,7 +787,7 @@ let hours = [{
   Thursday: { open: 5, close: 9 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -796,7 +796,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 7, close: 8 },
@@ -805,7 +805,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -814,7 +814,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 8, close: 10 },
-  Sunday: { open: 8, close: 9 }
+  Sunday: { open: 8, close: 9 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -823,7 +823,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 8, close: 9 }
+  Sunday: { open: 8, close: 9 },
 },
 {
   Monday: { open: 5, close: 8 },
@@ -832,7 +832,7 @@ let hours = [{
   Thursday: { open: 6, close: 9 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 7, close: 8 }
+  Sunday: { open: 7, close: 8 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -841,7 +841,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -850,7 +850,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 5, close: 7 }
+  Sunday: { open: 5, close: 7 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -859,7 +859,7 @@ let hours = [{
   Thursday: { open: 7, close: 10 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -868,7 +868,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 5, close: 9 },
@@ -877,7 +877,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 8, close: 10 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -886,7 +886,7 @@ let hours = [{
   Thursday: { open: 7, close: 8 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 7, close: 10 }
+  Sunday: { open: 7, close: 10 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -895,7 +895,7 @@ let hours = [{
   Thursday: { open: 5, close: 9 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -904,7 +904,7 @@ let hours = [{
   Thursday: { open: 8, close: 10 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -913,7 +913,7 @@ let hours = [{
   Thursday: { open: 6, close: 10 },
   Friday: { open: 8, close: 8 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 8, close: 9 }
+  Sunday: { open: 8, close: 9 },
 },
 {
   Monday: { open: 7, close: 7 },
@@ -922,7 +922,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -931,7 +931,7 @@ let hours = [{
   Thursday: { open: 5, close: 9 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 5, close: 9 },
@@ -940,7 +940,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 8, close: 7 },
   Saturday: { open: 8, close: 9 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -949,7 +949,7 @@ let hours = [{
   Thursday: { open: 6, close: 7 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 7, close: 8 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 6, close: 10 },
@@ -958,7 +958,7 @@ let hours = [{
   Thursday: { open: 5, close: 7 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -967,7 +967,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -976,7 +976,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 7, close: 8 },
-  Sunday: { open: 7, close: 9 }
+  Sunday: { open: 7, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -985,7 +985,7 @@ let hours = [{
   Thursday: { open: 5, close: 7 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 8, close: 10 },
-  Sunday: { open: 8, close: 8 }
+  Sunday: { open: 8, close: 8 },
 },
 {
   Monday: { open: 7, close: 7 },
@@ -994,7 +994,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 5, close: 8 },
@@ -1003,7 +1003,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 7, close: 10 }
+  Sunday: { open: 7, close: 10 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -1012,7 +1012,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 7, close: 8 },
@@ -1021,7 +1021,7 @@ let hours = [{
   Thursday: { open: 5, close: 9 },
   Friday: { open: 7, close: 9 },
   Saturday: { open: 7, close: 8 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -1030,7 +1030,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 7, close: 10 },
-  Sunday: { open: 7, close: 7 }
+  Sunday: { open: 7, close: 7 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -1039,7 +1039,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 8, close: 9 },
-  Sunday: { open: 7, close: 8 }
+  Sunday: { open: 7, close: 8 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -1048,7 +1048,7 @@ let hours = [{
   Thursday: { open: 6, close: 10 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -1057,7 +1057,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 6, close: 8 },
@@ -1066,7 +1066,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 8, close: 8 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 5, close: 9 },
@@ -1075,7 +1075,7 @@ let hours = [{
   Thursday: { open: 6, close: 7 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -1084,7 +1084,7 @@ let hours = [{
   Thursday: { open: 7, close: 9 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 5, close: 7 }
+  Sunday: { open: 5, close: 7 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -1093,7 +1093,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 10 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -1102,7 +1102,7 @@ let hours = [{
   Thursday: { open: 5, close: 7 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -1111,7 +1111,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -1120,7 +1120,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 6, close: 8 },
   Saturday: { open: 5, close: 10 },
-  Sunday: { open: 7, close: 9 }
+  Sunday: { open: 7, close: 9 },
 },
 {
   Monday: { open: 8, close: 8 },
@@ -1129,7 +1129,7 @@ let hours = [{
   Thursday: { open: 5, close: 10 },
   Friday: { open: 7, close: 9 },
   Saturday: { open: 8, close: 10 },
-  Sunday: { open: 6, close: 10 }
+  Sunday: { open: 6, close: 10 },
 },
 {
   Monday: { open: 6, close: 8 },
@@ -1138,7 +1138,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 7, close: 8 },
@@ -1147,7 +1147,7 @@ let hours = [{
   Thursday: { open: 8, close: 9 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 6, close: 10 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 5, close: 9 },
@@ -1156,7 +1156,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 6, close: 9 },
   Saturday: { open: 7, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 8, close: 7 },
@@ -1165,7 +1165,7 @@ let hours = [{
   Thursday: { open: 7, close: 10 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 5, close: 8 }
+  Sunday: { open: 5, close: 8 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -1174,7 +1174,7 @@ let hours = [{
   Thursday: { open: 5, close: 8 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -1183,7 +1183,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 5, close: 9 },
   Saturday: { open: 5, close: 7 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -1192,7 +1192,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 8, close: 9 },
@@ -1201,7 +1201,7 @@ let hours = [{
   Thursday: { open: 5, close: 9 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 6, close: 7 }
+  Sunday: { open: 6, close: 7 },
 },
 {
   Monday: { open: 5, close: 8 },
@@ -1210,7 +1210,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 8, close: 8 },
-  Sunday: { open: 8, close: 10 }
+  Sunday: { open: 8, close: 10 },
 },
 {
   Monday: { open: 5, close: 7 },
@@ -1219,7 +1219,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 6, close: 7 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 5, close: 10 }
+  Sunday: { open: 5, close: 10 },
 },
 {
   Monday: { open: 7, close: 9 },
@@ -1228,7 +1228,7 @@ let hours = [{
   Thursday: { open: 8, close: 10 },
   Friday: { open: 6, close: 10 },
   Saturday: { open: 7, close: 7 },
-  Sunday: { open: 5, close: 9 }
+  Sunday: { open: 5, close: 9 },
 },
 {
   Monday: { open: 5, close: 8 },
@@ -1237,7 +1237,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 8, close: 9 },
   Saturday: { open: 5, close: 8 },
-  Sunday: { open: 8, close: 7 }
+  Sunday: { open: 8, close: 7 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -1246,7 +1246,7 @@ let hours = [{
   Thursday: { open: 8, close: 8 },
   Friday: { open: 5, close: 8 },
   Saturday: { open: 6, close: 7 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 6, close: 10 },
@@ -1255,7 +1255,7 @@ let hours = [{
   Thursday: { open: 6, close: 7 },
   Friday: { open: 5, close: 7 },
   Saturday: { open: 8, close: 7 },
-  Sunday: { open: 6, close: 9 }
+  Sunday: { open: 6, close: 9 },
 },
 {
   Monday: { open: 8, close: 10 },
@@ -1264,7 +1264,7 @@ let hours = [{
   Thursday: { open: 7, close: 7 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 7, close: 10 },
-  Sunday: { open: 7, close: 10 }
+  Sunday: { open: 7, close: 10 },
 },
 {
   Monday: { open: 7, close: 10 },
@@ -1273,7 +1273,7 @@ let hours = [{
   Thursday: { open: 8, close: 7 },
   Friday: { open: 8, close: 10 },
   Saturday: { open: 5, close: 9 },
-  Sunday: { open: 6, close: 8 }
+  Sunday: { open: 6, close: 8 },
 },
 {
   Monday: { open: 6, close: 10 },
@@ -1282,7 +1282,7 @@ let hours = [{
   Thursday: { open: 6, close: 8 },
   Friday: { open: 7, close: 8 },
   Saturday: { open: 6, close: 9 },
-  Sunday: { open: 8, close: 8 }
+  Sunday: { open: 8, close: 8 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -1291,7 +1291,7 @@ let hours = [{
   Thursday: { open: 5, close: 8 },
   Friday: { open: 7, close: 7 },
   Saturday: { open: 7, close: 9 },
-  Sunday: { open: 6, close: 7 }
+  Sunday: { open: 6, close: 7 },
 },
 {
   Monday: { open: 6, close: 7 },
@@ -1300,16 +1300,15 @@ let hours = [{
   Thursday: { open: 6, close: 10 },
   Friday: { open: 7, close: 10 },
   Saturday: { open: 6, close: 8 },
-  Sunday: { open: 5, close: 8 }
+  Sunday: { open: 5, close: 8 },
 }];
 
 // Logs length of arrays storing data pieces - used to confirm 100.
-// console.log('websiteBodies: ', websiteBodies.length, '\n', 'coords: ', coords.length, '\n', 'addresses: ', addresses.length, '\n', 'phoneNumbers: ', phoneNumbers.length, '\n', 'hours: ', hours.length);
 
 module.exports = {
   urls,
   coords,
   addresses,
   phoneNumbers,
-  hours
-}
+  hours,
+};
