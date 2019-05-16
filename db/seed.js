@@ -33,6 +33,7 @@ const restaurantSchema = new Schema({
 const Restaurant = mongoose.model('restaurants', restaurantSchema);
 
 // GENERATE RANDOM DATA USING IMPORTED DATA PIECES
+// eslint-disable-next-line func-names
 (function () {
   const data = [];
 
