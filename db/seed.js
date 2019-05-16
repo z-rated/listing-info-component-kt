@@ -55,6 +55,7 @@ var Restaurant = mongoose.model('restaurants', restaurantSchema);
             console.log(err);
         }
         console.log('DB seeded!')
+        mongoose.connection.close();
     });
 })()
 
