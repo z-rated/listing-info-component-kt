@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/restaurant_info')
+mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true })
 let Schema = mongoose.Schema;
 let { urls, coords, addresses, phoneNumbers, hours } = require('./data.js');
 
@@ -41,8 +41,6 @@ var Restaurant = mongoose.model('restaurants', restaurantSchema);
         });
     }
     //END
-
-    console.log(data);
 
     mongoose.connection.collections['restaurants'].drop(function (err) {
         if (err) { console.log(err) }
