@@ -34,4 +34,4 @@ const getRestaurantById = id => new Promise((resolve, reject) => {
   });
 });
 
-module.exports = getRestaurantById;
+module.exports = { getRestaurantById };
