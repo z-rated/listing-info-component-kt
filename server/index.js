@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, '/../public')));
 
 app.get('/api/info/', (req, res) => {
   const { id } = req.query;
-  console.log(id);
+
   getRestaurantById(id)
     .then(([data]) => {
       res.send(data);
