@@ -14,8 +14,6 @@ app.get('/api/info/', (req, res) => {
     .then(([data]) => {
       res.send(data);
     });
-
-  // res.send(id);
 });
 
 app.listen(1234, () => {
