@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "zagat-restaurant-info-module",
+  "version": "1.0.0",
+  "description": "A module built with react and node.",
+  "author": "rafeautie",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
