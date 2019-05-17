@@ -1,4 +1,5 @@
 module.exports = {
+    "extends": "airbnb",
     "env": {
         "browser": true,
         "commonjs": true,

@@ -1,60 +1,69 @@
-let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true })
-let Schema = mongoose.Schema;
-let { urls, coords, addresses, phoneNumbers, hours } = require('./data.js');
+const mongoose = require('mongoose');
 
-let restaurantSchema = new Schema({
-    id: Number,
-    location: {
-        address: String,
-        coords: String
-    },
-    phone: String,
-    website: String,
-    hours: {
-        Monday: { open: Number, close: Number },
-        Tuesday: { open: Number, close: Number },
-        Wednesday: { open: Number, close: Number },
-        Thursday: { open: Number, close: Number },
-        Friday: { open: Number, close: Number },
-        Saturday: { open: Number, close: Number },
-        Sunday: { open: Number, close: Number },
-    }
-})
+mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true });
+const { Schema } = mongoose.Schema;
+const {
+  urls,
+  coords,
+  addresses,
+  phoneNumbers,
+  hours,
+} = require('./data.js');
 
-var Restaurant = mongoose.model('restaurants', restaurantSchema);
+const restaurantSchema = new Schema({
 
-//GENERATE RANDOM DATA USING IMPORTED DATA PIECES
+  id: Number,
+  location: {
+    address: String,
+    coords: String,
+  },
+  phone: String,
+  website: String,
+  hours: {
+    Monday: { open: Number, close: Number },
+    Tuesday: { open: Number, close: Number },
+    Wednesday: { open: Number, close: Number },
+    Thursday: { open: Number, close: Number },
+    Friday: { open: Number, close: Number },
+    Saturday: { open: Number, close: Number },
+    Sunday: { open: Number, close: Number },
+  },
+});
+
+const Restaurant = mongoose.model('restaurants', restaurantSchema);
+
+// GENERATE RANDOM DATA USING IMPORTED DATA PIECES
+// eslint-disable-next-line func-names
 (function () {
-    let data = [];
+  const data = [];
 
-    for (let i = 0; i < 100; i++) {
-        data.push({
-            id: i,
-            location: {
-                address: addresses[i],
-                coords: coords[i]
-            },
-            phone: phoneNumbers[i],
-            website: urls[i],
-            hours: hours[i]
-        });
+  for (let i = 0; i < 100; i += 1) {
+    data.push({
+      id: (i + 1),
+      location: {
+        address: addresses[i],
+        coords: coords[i],
+      },
+      phone: phoneNumbers[i],
+      website: urls[i],
+      hours: hours[i],
+    });
+  }
+  // END
+
+  mongoose.connection.collections.restaurants.drop((err) => {
+    if (err) { console.log(err); }
+    console.log('\nRESTAURANTS COLLECTION DROPPED.');
+  });
+
+  // INSERT DATA INTO DB
+  Restaurant.insertMany(data, (err) => {
+    if (err) {
+      console.log(err);
     }
-    //END
+    console.log('DB seeded!');
+    mongoose.connection.close();
+  });
+}());
 
-    mongoose.connection.collections['restaurants'].drop(function (err) {
-        if (err) { console.log(err) }
-        console.log('\nRESTAURANTS COLLECTION DROPPED.');
-    });
-
-    //INSERT DATA INTO DB
-    Restaurant.insertMany(data, (err) => {
-        if (err) {
-            console.log(err);
-        }
-        console.log('DB seeded!')
-        mongoose.connection.close();
-    });
-})()
-
-module.exports = Restaurant
+module.exports = Restaurant;
