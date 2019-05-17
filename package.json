@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "Zagat Restaurant Info Module",
+  "version": "1.0.0",
+  "description": "A module built with react and node.",
+  "author": "rafeautie",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -35,7 +35,6 @@
     "babel-loader": "^8.0.6",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-google": "^0.13.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.17.2",
