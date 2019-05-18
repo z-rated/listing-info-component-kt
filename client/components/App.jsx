@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TimeListContainer from '../redux/containers/TimeListContainer';
 import AddressContainer from '../redux/containers/AddressContainer';
+import PhoneNumberContainer from '../redux/containers/PhoneNumberContainer';
 
 const Module = styled.div`
   padding: 24px 32px;
@@ -35,10 +36,12 @@ const App = ({ updateData }) => {
       <TimeListContainer />
       <Spacer />
       <AddressContainer />
-        {/* <div id='phone'>{this.props.phone}</div>
-        <div id='website'>{this.props.url}</div>
-        <div id='get-directions'></div>
-        <MapContainer /> */}
+      <Spacer />
+      <PhoneNumberContainer />
+      {/* <div id='phone'><a href="tel:">{props.phone}</a></div>
+      <div id='website'>{thprops.url}</div>
+      <div id='get-directions'></div>
+      <MapContainer /> */}
     </Module>
   );
 };
