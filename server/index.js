@@ -7,8 +7,8 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/../public')));
 
-app.get('/api/info/', (req, res) => {
-  const { id } = req.query;
+app.get('/api/restaurants/:id/info/', (req, res) => {
+  const { id } = req.params;
 
   getRestaurantById(id)
     .then(([data]) => {
