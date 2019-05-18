@@ -27,6 +27,8 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 - Express
 - Webpack
 - Redux
+- React
+- React Styled Components
 
 ## Development
 
