@@ -1,50 +1,68 @@
 import React from 'react';
 import styled from 'styled-components';
+import OpenStatusContainer from '../redux/containers/OpenStatusContainer';
+import TimeListEntry from './TimeListEntry';
 
-const OpenNow = styled.div`
-  display: inline-block;
+const DropDown = styled.ul`
+  max-width: 315px;
   color: #101820;
   letter-spacing: .013em;
-  
-  &:hover {
-    color: #b70038; // <Thing> when hovered
-  }
-  `;
-
-const DropDown = styled.div`
-  display: flex;
-  flex-direction:
-  color: #101820;
-  letter-spacing: .013em;
-  
-  &:hover {
-    color: #b70038; // <Thing> when hovered
-  }
+  list-style-type: none;
+  padding-left: 48px;
   `;
 
 const getDay = () => {
   const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
   const today = new Date();
 
   return weekdays[today.getDay()];
 };
 
-const TimeList = ({ timeListIsOpen, toggleTimeList, data }) => (
-  <div>
+const makeList = (hours) => {
+  const keys = Object.keys(hours);
+  const today = getDay();
+  const days = [];
+
+  for (let i = 0; i < keys.length; i += 1) {
+    const timeData = hours[keys[i]];
+    const isBold = keys[i] === today;
+
+    days.push(<TimeListEntry
+      open={timeData.open}
+      close={timeData.close}
+      day={keys[i]}
+      today={today}
+      key={i}
+      isBold={isBold}
+    />);
+  }
+
+  return days;
+};
+
+const TimeList = ({ timeListIsOpen, data }) => {
+  const list = data ? makeList(data.hours) : [];
+  const day = getDay();
+
+  return (
     <div>
-      <div id="timeLogo">{getDay()}</div>
-      <OpenNow>
-      </OpenNow>
+      {
+        data
+          ? (
+            <OpenStatusContainer
+              day={day}
+              timeListIsOpen={timeListIsOpen}
+            />
+          )
+          : ''
+      }
+      {timeListIsOpen ? (
+        <DropDown>
+          {list}
+        </DropDown>
+      ) : ''}
     </div>
-    {timeListIsOpen ? (
-      <DropDown>
-        <ul>
-          <li>time</li>
-        </ul>
-      </DropDown>
-    ) : ''}
-  </div>
-);
+  );
+};
 
 export default TimeList;
