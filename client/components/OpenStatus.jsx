@@ -21,7 +21,8 @@ const Status = styled.div`
 
 const Icon = styled.img`
   padding-right: 24px;
-  width: 24px;
+  padding-left: 2px;
+  width: 22px;
 `;
 
 const BulletContainer = styled.span`

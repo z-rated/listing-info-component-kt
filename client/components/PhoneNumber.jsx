@@ -15,8 +15,8 @@ const Container = styled.div`
 
 const Icon = styled.img`
   padding-right: 24px;
-  padding-left: 1px;
-  width: 24px;
+  padding-left: 3px;
+  width: 20px;
 `;
 
 const PhoneA = styled.a`

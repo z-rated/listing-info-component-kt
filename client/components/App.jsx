@@ -4,6 +4,7 @@ import TimeListContainer from '../redux/containers/TimeListContainer';
 import AddressContainer from '../redux/containers/AddressContainer';
 import PhoneNumberContainer from '../redux/containers/PhoneNumberContainer';
 import WebsiteContainer from '../redux/containers/WebsiteContainer';
+import GetDirectionsContainer from '../redux/containers/GetDirectionsContainer';
 
 const Module = styled.div`
   padding: 24px 32px;
@@ -17,7 +18,7 @@ const Module = styled.div`
 
 const Spacer = styled.div`
   width: 100%;
-  height: 10px;
+  height: 25px;
 
 `;
 
@@ -41,10 +42,9 @@ const App = ({ updateData }) => {
       <PhoneNumberContainer />
       <Spacer />
       <WebsiteContainer />
-      {/* <div id='phone'><a href="tel:">{props.phone}</a></div>
-      <div id='website'>{thprops.url}</div>
-      <div id='get-directions'></div>
-      <MapContainer /> */}
+      <Spacer />
+      <GetDirectionsContainer />
+      {/* <MapContainer /> */}
     </Module>
   );
 };

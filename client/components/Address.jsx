@@ -16,7 +16,7 @@ const Container = styled.div`
 const Icon = styled.img`
   padding-right: 24px;
   padding-left: 3px;
-  width: 20px;
+  width: 19px;
 `;
 
 const AddressText = styled.span`
