@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true });
-const { Schema } = mongoose.Schema;
+const { Schema } = mongoose;
 const {
   urls,
   coords,

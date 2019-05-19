@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import TimeListContainer from '../redux/containers/TimeListContainer';
 import AddressContainer from '../redux/containers/AddressContainer';
 import PhoneNumberContainer from '../redux/containers/PhoneNumberContainer';
+import WebsiteContainer from '../redux/containers/WebsiteContainer';
 
 const Module = styled.div`
   padding: 24px 32px;
@@ -38,6 +39,8 @@ const App = ({ updateData }) => {
       <AddressContainer />
       <Spacer />
       <PhoneNumberContainer />
+      <Spacer />
+      <WebsiteContainer />
       {/* <div id='phone'><a href="tel:">{props.phone}</a></div>
       <div id='website'>{thprops.url}</div>
       <div id='get-directions'></div>
