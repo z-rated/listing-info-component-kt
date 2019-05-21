@@ -6,7 +6,6 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   color: #101820;
-  min-width: 380px;
 
   &:hover {
     color: #b70038;
@@ -20,7 +19,7 @@ const Icon = styled.img`
 `;
 
 const AddressText = styled.span`
-  margin-top: 1px;
+  margin-top: 3px;
 `;
 
 const Address = ({ data }) => {

@@ -11,6 +11,8 @@
 body {
   font-family: "Calibre-Regular";
   font-size: 14px;
+  background-color: rgb(243, 243, 243);
+  height: 200vh;
 }
 
 .fa-chevron-down {

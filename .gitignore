@@ -26,3 +26,6 @@ dist/
 
 #Webpack Bundle
 bundle.js
+
+#Maps Config
+maps-config.js

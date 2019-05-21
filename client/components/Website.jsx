@@ -6,11 +6,6 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   color: #101820;
-  min-width: 380px;
-
-  &:hover {
-    color: #b70038;
-  }
 `;
 
 const Icon = styled.img`
@@ -22,6 +17,10 @@ const Icon = styled.img`
 const WebsiteA = styled.a`
   text-decoration: none;
   color: #101820;
+
+  &:hover {
+    color: #b70038;
+  }
 `;
 
 const WebsiteContainer = styled.span`

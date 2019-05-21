@@ -8,8 +8,18 @@ import GetDirectionsContainer from '../redux/containers/GetDirectionsContainer';
 import MapContainer from '../redux/containers/MapContainer';
 
 const Module = styled.div`
-  padding: 24px 32px;
-  min-width: 250px;
+  padding: 32px;
+  margin: 32px;
+  margin-right: 150px;
+  min-width: 22vw;
+  max-width: 330px;
+  max-height: 80vh;
+  background-color: white;
+  float: right;
+  overflow: scroll;
+  position: sticky;
+  top: -32px;
+  bottom: 32px;
 
   @font-face {
     font-family: "Calibre-Regular";
@@ -20,7 +30,6 @@ const Module = styled.div`
 const Spacer = styled.div`
   width: 100%;
   height: 25px;
-
 `;
 
 const initData = (cb) => {
@@ -45,6 +54,7 @@ const App = ({ updateData }) => {
       <WebsiteContainer />
       <Spacer />
       <GetDirectionsContainer />
+      <Spacer />
       <MapContainer />
     </Module>
   );
