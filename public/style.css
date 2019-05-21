@@ -25,6 +25,6 @@ body {
 
 #app {
   position: sticky;
-  top: -32px;
+  top: 32px;
   bottom: 32px;
 }
