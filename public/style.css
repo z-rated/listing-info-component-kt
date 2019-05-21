@@ -22,3 +22,9 @@ body {
 .up {
   transform: rotate(-180deg);
 }
+
+#app {
+  position: sticky;
+  top: -32px;
+  bottom: 32px;
+}

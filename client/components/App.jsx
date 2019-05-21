@@ -17,9 +17,6 @@ const Module = styled.div`
   background-color: white;
   float: right;
   overflow: scroll;
-  position: sticky;
-  top: -32px;
-  bottom: 32px;
 
   @font-face {
     font-family: "Calibre-Regular";
