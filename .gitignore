@@ -25,7 +25,7 @@ build/
 dist/
 
 #Webpack Bundle
-bundle.js
+public/bundle.js
 
 #Maps Config
 maps-config.js
