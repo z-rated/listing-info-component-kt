@@ -24,3 +24,8 @@ coverage
 build/
 dist/
 
+#Webpack Bundle
+public/bundle.js
+
+#Maps Config
+maps-config.js
