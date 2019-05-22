@@ -13,6 +13,9 @@ app.get('/api/restaurants/:id/info/', (req, res) => {
   getRestaurantById(id)
     .then(([data]) => {
       res.send(data);
+    })
+    .catch((err) => {
+      console.log(err);
     });
 });
 
