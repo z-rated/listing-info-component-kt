@@ -49,6 +49,8 @@
     "husky": "^2.3.0",
     "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   }
 }

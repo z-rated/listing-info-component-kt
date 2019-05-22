@@ -9,14 +9,14 @@
 }
 
 body {
-  font-family: "Calibre-Regular";
+  font-family: "Calibre-Regular", sans-serif;
   font-size: 14px;
   background-color: rgb(243, 243, 243);
-  height: 200vh;
+  margin: 0;
 }
 
 .fa-chevron-down {
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .up {
@@ -27,4 +27,12 @@ body {
   position: sticky;
   top: 32px;
   bottom: 32px;
+}
+
+.close-btn:hover #background {
+  fill: white;
+}
+
+.close-btn:hover #path {
+  fill: rgb(16, 24, 32);
 }
