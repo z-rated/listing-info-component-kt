@@ -1,39 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
+import MapHelpers from '../map-helpers';
 import API_KEY from '../maps-config';
 
 const MapDiv = styled.div`
-  // filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  // filter: gray;
-  // -webkit-filter: grayscale(99%);
-  // -webkit-backface-visibility: hidden;
   height: 328px;
   width: 100%;
+  position: relative;
 `;
 
 const MarkerContainer = styled.img`
   width: 24px;
 `;
 
-const createMapOptions = (maps) => {
-  return {
-    panControl: false,
-    mapTypeControl: false,
-    scrollwheel: false,
-    zoomControl: false,
-    fullscreenControl: false,
-    styles: [{ stylers: [{ saturation: -100 }, { gamma: 0.8 }, { lightness: 4 }, { visibility: 'on' }] }],
-  };
-};
+const GetDirectionsButton = styled.div`
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  color: #b70038;
+  width: 150px;
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
 
-const parseCoords = coords => coords.split(',').map((coord, i) => {
-  let co = coord;
-  if (i === 1) {
-    co = coord.slice(1);
+  &:hover {
+    background-color: #b70038;
+    color: white;
   }
-  return co.slice(0, 17);
-});
+`;
+
+const ButtonText = styled.p`
+  margin: 0;
+  letter-spacing: .086em;
+`;
 
 const Marker = ({ text }) => (
   <div>
@@ -41,14 +45,14 @@ const Marker = ({ text }) => (
   </div>
 );
 
-const Map = ({ data }) => {
+const Map = ({ data, modalIsOpen, toggleModal }) => {
   if (data) {
-    const coords = parseCoords(data.location.coords);
+    const coords = MapHelpers.parseCoords(data.location.coords);
     return (
       // Important! Always set the container height explicitly
       <MapDiv>
         <GoogleMapReact
-          options={createMapOptions}
+          options={MapHelpers.createMapOptions}
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={{
             lat: Number(coords[0]),
@@ -62,6 +66,9 @@ const Map = ({ data }) => {
             text="Marker"
           />
         </GoogleMapReact>
+        <GetDirectionsButton onClick={() => toggleModal(!modalIsOpen)}>
+          <ButtonText>EXPAND MAP</ButtonText>
+        </GetDirectionsButton>
       </MapDiv>
     );
   }

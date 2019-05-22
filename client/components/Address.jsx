@@ -22,14 +22,14 @@ const AddressText = styled.span`
   margin-top: 3px;
 `;
 
-const Address = ({ data }) => {
+const Address = ({ data, toggleModal, modalIsOpen }) => {
   if (data) {
     return (
       <Container>
         <span>
           <Icon src="./icons/location-icon.jpg" />
         </span>
-        <AddressText>
+        <AddressText onClick={() => { toggleModal(!modalIsOpen); }}>
           {data.location.address}
         </AddressText>
       </Container>

@@ -6,6 +6,7 @@ const mapStateToProps = state => ({
   modalIsOpen: state.modalIsOpen,
   data: state.data,
 });
+
 const mapDispatchToProps = dispatch => ({
   toggleModal: (modalIsOpen) => {
     dispatch(toggleModal(modalIsOpen));

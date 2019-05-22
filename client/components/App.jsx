@@ -6,6 +6,7 @@ import PhoneNumberContainer from '../redux/containers/PhoneNumberContainer';
 import WebsiteContainer from '../redux/containers/WebsiteContainer';
 import GetDirectionsContainer from '../redux/containers/GetDirectionsContainer';
 import MapContainer from '../redux/containers/MapContainer';
+import ModalContainer from '../redux/containers/ModalContainer';
 
 const Module = styled.div`
   padding: 32px;
@@ -35,25 +36,28 @@ const initData = (cb) => {
     .then(data => cb(data));
 };
 
-const App = ({ updateData }) => {
+const App = ({ modalIsOpen, updateData }) => {
   initData((data) => {
     updateData(data);
   });
 
   return (
-    <Module>
-      <TimeListContainer />
-      <Spacer />
-      <AddressContainer />
-      <Spacer />
-      <PhoneNumberContainer />
-      <Spacer />
-      <WebsiteContainer />
-      <Spacer />
-      <GetDirectionsContainer />
-      <Spacer />
-      <MapContainer />
-    </Module>
+    <div>
+      {modalIsOpen ? <ModalContainer /> : ''}
+      <Module>
+        <TimeListContainer />
+        <Spacer />
+        <AddressContainer />
+        <Spacer />
+        <PhoneNumberContainer />
+        <Spacer />
+        <WebsiteContainer />
+        <Spacer />
+        <GetDirectionsContainer />
+        <Spacer />
+        <MapContainer />
+      </Module>
+    </div>
   );
 };
 
