@@ -33,7 +33,7 @@ const GetDirectionsButton = styled.div`
   bottom: 60px;
   left: 120px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border: 2px solid #b70038;
   background-color: white;
@@ -44,15 +44,23 @@ const GetDirectionsButton = styled.div`
   box-sizing: border-box;
 
   &:hover {
-    border: 2px solid white;
     background-color: #b70038;
     color: white;
+
+    svg {
+      stroke: white;
+    }
   }
 `;
 
 const ButtonText = styled.p`
   margin: 0;
   letter-spacing: .086em;
+`;
+
+const ButtonIcon = styled.svg`
+  width: 22px;
+  stroke: #b70038;
 `;
 
 const Title = styled.p`
@@ -99,8 +107,20 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
               text="Marker"
             />
           </GoogleMapReact>
-          <GetDirectionsButton onClick={() => location.assign(`https://www.google.com/maps/place/${data.location.coords}`)}>
+          <GetDirectionsButton className="get-dirs-btn" onClick={() => location.assign(`https://www.google.com/maps/place/${data.location.coords}`)}>
             <ButtonText>GET DIRECTIONS</ButtonText>
+            <ButtonIcon viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <title>directions</title>
+              <g id="ZagX-Icons" strokeWidth="1.5" fill="none" fillRule="evenodd">
+                <g id="directions">
+                  <g id="Page-1" transform="translate(2.000000, 2.000000)">
+                    <polygon id="Stroke-1" points="12.4349377 7.72051001 13.9766567 9.00464447 12.4349377 10.2887789" />
+                    <polyline id="Stroke-2" points="7.17898298 12.3341135 7.17898298 9.00445507 11.6459905 9.00445507" />
+                    <path d="M13.9325264,15.9027951 L10.5100619,19.3252596 C10.1416782,19.6936434 9.538438,19.6936434 9.1710013,19.3252596 L0.355361407,10.5096198 C-0.0130222989,10.1412361 -0.0130222989,9.5389429 0.355361407,9.17055919 L9.1710013,0.354919302 C9.539385,-0.0134644042 10.1416782,-0.0134644042 10.5100619,0.354919302 L19.3257018,9.17055919 C19.6940855,9.5389429 19.6940855,10.1412361 19.3257018,10.5096198 L15.8786151,13.9567064" id="Stroke-3" />
+                  </g>
+                </g>
+              </g>
+            </ButtonIcon>
           </GetDirectionsButton>
           <CloseButton className="close-btn" onClick={() => { toggleModal(!modalIsOpen); }}>
             <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" version="1.1">
@@ -116,7 +136,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
             </svg>
           </CloseButton>
         </MapDiv>
-      </ModalBG>
+      </ModalBG >
     );
   }
   return '';

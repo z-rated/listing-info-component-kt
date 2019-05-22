@@ -29,6 +29,9 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 - Redux
 - React
 - React Styled Components
+- Google Map React
+- Jest
+- Puppeteer
 
 ## Development
 
