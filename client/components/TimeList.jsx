@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import OpenStatusContainer from '../redux/containers/OpenStatusContainer';
+import OpenStatus from './OpenStatus';
 import TimeListEntry from './TimeListEntry';
 
 const DropDown = styled.ul`
@@ -40,24 +40,26 @@ const makeList = (hours) => {
   return days;
 };
 
-const TimeList = ({ timeListIsOpen, data }) => {
+const TimeList = ({ timeListIsOpen, data, toggleTimeList }) => {
   const list = data ? makeList(data.hours) : [];
   const day = getDay();
 
   return (
-    <div>
+    <div id="hours">
       {
         data
           ? (
-            <OpenStatusContainer
+            <OpenStatus
+              data={data}
               day={day}
               timeListIsOpen={timeListIsOpen}
+              toggleTimeList={toggleTimeList}
             />
           )
           : ''
       }
       {timeListIsOpen ? (
-        <DropDown>
+        <DropDown id="hours-list">
           {list}
         </DropDown>
       ) : ''}

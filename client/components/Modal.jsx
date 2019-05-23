@@ -89,7 +89,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
   if (data) {
     const coords = MapHelpers.parseCoords(data.location.coords);
     return (
-      <ModalBG>
+      <ModalBG id="modal">
         <Title>TEST NAME</Title>
         <MapDiv>
           <GoogleMapReact
