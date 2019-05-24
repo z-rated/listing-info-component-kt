@@ -41,5 +41,3 @@ const Address = ({ data, toggleModal, modalIsOpen }) => {
 
 
 export default Address;
-
-// href={`http://www.google.com/maps/place/${data.location.coords}`}

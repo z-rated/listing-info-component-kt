@@ -58,7 +58,6 @@ const Map = ({ data, modalIsOpen, toggleModal }) => {
   if (data) {
     const coords = MapHelpers.parseCoords(data.location.coords);
     return (
-      // Important! Always set the container height explicitly
       <MapDiv>
         <GoogleMapReact
           options={MapHelpers.createMapOptions}
