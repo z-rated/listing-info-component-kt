@@ -50,6 +50,7 @@ const TimeList = ({ timeListIsOpen, data, toggleTimeList }) => {
         data
           ? (
             <OpenStatus
+              data-status
               data={data}
               day={day}
               timeListIsOpen={timeListIsOpen}

@@ -36,7 +36,7 @@ const TimeListEntry = ({ open, close, day, isBold }) => {
     return (
       <EntryContainer>
         <NoDotSpanBold>{day}</NoDotSpanBold>
-        <NoDotSpanBold>{`${open}:00 AM - ${close}:00 PM`}</NoDotSpanBold>
+        <NoDotSpanBold data-hours-entry>{`${open}:00 AM - ${close}:00 PM`}</NoDotSpanBold>
         <Dots />
       </EntryContainer>
     );
@@ -45,7 +45,7 @@ const TimeListEntry = ({ open, close, day, isBold }) => {
   return (
     <EntryContainer>
       <NoDotSpan>{day}</NoDotSpan>
-      <NoDotSpan>{`${open}:00 AM - ${close}:00 PM`}</NoDotSpan>
+      <NoDotSpan data-hours-entry>{`${open}:00 AM - ${close}:00 PM`}</NoDotSpan>
       <Dots />
     </EntryContainer>
   );
