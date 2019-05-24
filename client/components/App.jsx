@@ -46,15 +46,10 @@ const App = ({ modalIsOpen, updateData }) => {
       {modalIsOpen ? <ModalContainer /> : ''}
       <Module>
         <TimeListContainer />
-        <Spacer />
         <AddressContainer />
-        <Spacer />
         <PhoneNumberContainer />
-        <Spacer />
         <WebsiteContainer />
-        <Spacer />
         <GetDirectionsContainer />
-        <Spacer />
         <MapContainer />
       </Module>
     </div>

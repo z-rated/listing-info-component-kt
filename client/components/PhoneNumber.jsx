@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CompContainer from './CompContainer';
 
 const Container = styled.div`
   letter-spacing: .013em;
@@ -40,14 +41,16 @@ const PhoneNumber = ({ data }) => {
     const hrefNumber = parseNumber(data.phone);
 
     return (
-      <Container>
-        <span>
-          <Icon src="./icons/phone-icon.jpg" />
-        </span>
-        <PhoneContainer>
-          <PhoneA href={`tel:${hrefNumber}`} data-phone-number>{data.phone}</PhoneA>
-        </PhoneContainer>
-      </Container>
+      <CompContainer>
+        <Container>
+          <span>
+            <Icon src="./icons/phone-icon.jpg" />
+          </span>
+          <PhoneContainer>
+            <PhoneA href={`tel:${hrefNumber}`} data-phone-number>{data.phone}</PhoneA>
+          </PhoneContainer>
+        </Container>
+      </CompContainer>
     );
   }
 
