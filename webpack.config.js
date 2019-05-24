@@ -10,12 +10,10 @@ module.exports = {
       },
     ],
   },
-  entry: {
-    app: __dirname + '/client/index.jsx',
-  },
+  entry: [`${__dirname}/client/index.jsx`],
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/public',
+    path: `${__dirname}/public`,
   },
   resolve: {
     extensions: ['.js', '.jsx'],

@@ -58,7 +58,7 @@ const OpenStatus = ({ data, day, toggleTimeList, timeListIsOpen }) => {
   const status = isOpen(data.hours[day].open, data.hours[day].close);
 
   return (
-    <Container onClick={() => toggleTimeList(!timeListIsOpen)}>
+    <Container id="status-container" onClick={() => toggleTimeList(!timeListIsOpen)}>
       <span>
         <Icon src="./icons/time-icon.jpg" />
       </span>
@@ -66,13 +66,13 @@ const OpenStatus = ({ data, day, toggleTimeList, timeListIsOpen }) => {
         {
           status
             ? (
-              <span>
+              <span className="status">
                 Open Now
                 <BulletContainer>&bull;</BulletContainer>
               </span>
             )
             : (
-              <span>
+              <span className="status">
                 Closed
                 <BulletContainer>&bull;</BulletContainer>
               </span>

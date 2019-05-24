@@ -45,7 +45,7 @@ const PhoneNumber = ({ data }) => {
           <Icon src="./icons/phone-icon.jpg" />
         </span>
         <PhoneContainer>
-          <PhoneA href={`tel:${hrefNumber}`}>{data.phone}</PhoneA>
+          <PhoneA href={`tel:${hrefNumber}`} data-phone-number>{data.phone}</PhoneA>
         </PhoneContainer>
       </Container>
     );
