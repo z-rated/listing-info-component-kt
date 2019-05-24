@@ -35,7 +35,7 @@ const Website = ({ data }) => {
           <Icon src="./icons/website-icon.jpg" />
         </span>
         <WebsiteContainer>
-          <WebsiteA href={`${data.website}`}>{data.website}</WebsiteA>
+          <WebsiteA onClick={() => window.location.assign(`${data.website}`)} data-website>{data.website}</WebsiteA>
         </WebsiteContainer>
       </Container>
     );

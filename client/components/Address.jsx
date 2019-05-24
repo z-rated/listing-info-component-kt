@@ -29,7 +29,7 @@ const Address = ({ data, toggleModal, modalIsOpen }) => {
         <span>
           <Icon src="./icons/location-icon.jpg" />
         </span>
-        <AddressText onClick={() => { toggleModal(!modalIsOpen); }}>
+        <AddressText onClick={() => { toggleModal(!modalIsOpen); }} data-address-text>
           {data.location.address}
         </AddressText>
       </Container>

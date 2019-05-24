@@ -89,7 +89,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
   if (data) {
     const coords = MapHelpers.parseCoords(data.location.coords);
     return (
-      <ModalBG id="modal">
+      <ModalBG data-modal>
         <Title>TEST NAME</Title>
         <MapDiv>
           <GoogleMapReact
@@ -100,6 +100,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
               lng: -Number(coords[1]),
             }}
             defaultZoom={16}
+            data-modal-map
           >
             <Marker
               lat={Number(coords[0])}
@@ -110,7 +111,6 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
           <GetDirectionsButton className="get-dirs-btn" onClick={() => location.assign(`https://www.google.com/maps/place/${data.location.coords}`)}>
             <ButtonText>GET DIRECTIONS</ButtonText>
             <ButtonIcon viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-              <title>directions</title>
               <g id="ZagX-Icons" strokeWidth="1.5" fill="none" fillRule="evenodd">
                 <g id="directions">
                   <g id="Page-1" transform="translate(2.000000, 2.000000)">
