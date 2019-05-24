@@ -10,7 +10,8 @@
   "scripts": {
     "seed": "node ./db/seed.js",
     "build": "webpack -d -w",
-    "test": "jest --env=jsdom --coverage --colors",
+    "test": "jest --verbose --watchAll",
+    "test:coverage" : "jest --coverage --colors",
     "start": "nodemon server/index.js"
   },
   "lint-staged": {
