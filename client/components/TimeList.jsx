@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import OpenStatus from './OpenStatus';
 import TimeListEntry from './TimeListEntry';
+import CompContainer from './CompContainer';
 
 const DropDown = styled.ul`
   max-width: 315px;
@@ -45,7 +46,7 @@ const TimeList = ({ timeListIsOpen, data, toggleTimeList }) => {
   const day = getDay();
 
   return (
-    <div id="hours">
+    <CompContainer id="hours">
       {
         data
           ? (
@@ -64,7 +65,7 @@ const TimeList = ({ timeListIsOpen, data, toggleTimeList }) => {
           {list}
         </DropDown>
       ) : ''}
-    </div>
+    </CompContainer>
   );
 };
 

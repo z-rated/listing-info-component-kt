@@ -136,7 +136,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
             </svg>
           </CloseButton>
         </MapDiv>
-      </ModalBG >
+      </ModalBG>
     );
   }
   return '';

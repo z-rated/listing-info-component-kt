@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CompContainer from './CompContainer';
 
 const Container = styled.div`
   letter-spacing: .013em;
@@ -30,14 +31,16 @@ const WebsiteContainer = styled.span`
 const Website = ({ data }) => {
   if (data) {
     return (
-      <Container>
-        <span>
-          <Icon src="./icons/website-icon.jpg" />
-        </span>
-        <WebsiteContainer>
-          <WebsiteA onClick={() => window.location.assign(`${data.website}`)} data-website>{data.website}</WebsiteA>
-        </WebsiteContainer>
-      </Container>
+      <CompContainer>
+        <Container>
+          <span>
+            <Icon src="./icons/website-icon.jpg" />
+          </span>
+          <WebsiteContainer>
+            <WebsiteA onClick={() => window.location.assign(`${data.website}`)} data-website>{data.website}</WebsiteA>
+          </WebsiteContainer>
+        </Container>
+      </CompContainer>
     );
   }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CompContainer from './CompContainer';
 
 const Container = styled.div`
   letter-spacing: .013em;
@@ -30,14 +31,16 @@ const GetDirectionsContainer = styled.span`
 const Website = ({ data }) => {
   if (data) {
     return (
-      <Container>
-        <span>
-          <Icon src="./icons/directions-icon.jpg" />
-        </span>
-        <GetDirectionsContainer>
-          <DirA onClick={() => window.location.assign(`https://www.google.com/maps/place/${data.location.coords}`)} data-link>Get Directions</DirA>
-        </GetDirectionsContainer>
-      </Container>
+      <CompContainer>
+        <Container>
+          <span>
+            <Icon src="./icons/directions-icon.jpg" />
+          </span>
+          <GetDirectionsContainer>
+            <DirA onClick={() => window.location.assign(`https://www.google.com/maps/place/${data.location.coords}`)} data-link>Get Directions</DirA>
+          </GetDirectionsContainer>
+        </Container>
+      </CompContainer>
     );
   }
 

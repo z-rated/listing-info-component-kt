@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CompContainer from './CompContainer';
 
 const Container = styled.div`
   letter-spacing: .013em;
@@ -25,14 +26,16 @@ const AddressText = styled.span`
 const Address = ({ data, toggleModal, modalIsOpen }) => {
   if (data) {
     return (
-      <Container>
-        <span>
-          <Icon src="./icons/location-icon.jpg" />
-        </span>
-        <AddressText onClick={() => { toggleModal(!modalIsOpen); }} data-address-text>
-          {data.location.address}
-        </AddressText>
-      </Container>
+      <CompContainer>
+        <Container>
+          <span>
+            <Icon src="./icons/location-icon.jpg" />
+          </span>
+          <AddressText onClick={() => { toggleModal(!modalIsOpen); }} data-address-text>
+            {data.location.address}
+          </AddressText>
+        </Container>
+      </CompContainer>
     );
   }
 
@@ -41,5 +44,3 @@ const Address = ({ data, toggleModal, modalIsOpen }) => {
 
 
 export default Address;
-
-// href={`http://www.google.com/maps/place/${data.location.coords}`}
