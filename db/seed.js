@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true });
 const { Schema } = mongoose;
 const {
+  name,
   urls,
   coords,
   addresses,
@@ -13,6 +14,7 @@ const {
 const restaurantSchema = new Schema({
 
   id: Number,
+  name: String,
   location: {
     address: String,
     coords: String,
@@ -40,6 +42,7 @@ const Restaurant = mongoose.model('restaurants', restaurantSchema);
   for (let i = 0; i < 100; i += 1) {
     data.push({
       id: (i + 1),
+      name: name[i],
       location: {
         address: addresses[i],
         coords: coords[i],
