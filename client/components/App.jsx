@@ -25,11 +25,6 @@ const Module = styled.div`
   }
 `;
 
-const Spacer = styled.div`
-  width: 100%;
-  height: 25px;
-`;
-
 const initData = (cb) => {
   fetch(`http://127.0.0.1:1234/api/restaurants/${'100'}/info`)
     .then(res => res.json())
