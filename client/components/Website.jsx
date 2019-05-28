@@ -34,7 +34,7 @@ const Website = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="./icons/website-icon.jpg" />
+            <Icon src="http://127.0.0.1:3002/icons/website-icon.jpg" />
           </span>
           <WebsiteContainer>
             <WebsiteA onClick={() => window.location.assign(`${data.website}`)} data-website>{data.website}</WebsiteA>

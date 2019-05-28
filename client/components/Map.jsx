@@ -50,7 +50,7 @@ const ButtonIcon = styled.div`
 
 const Marker = ({ text }) => (
   <div>
-    <MarkerContainer src="./icons/pin_zagat.png" alt={text} />
+    <MarkerContainer src="http://127.0.0.1:3002/icons/pin_zagat.png" alt={text} />
   </div>
 );
 

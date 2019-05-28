@@ -1,12 +1,14 @@
 /* eslint-disable no-console */
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const { getRestaurantById } = require('../db/index.js');
 
 const PORT = 3002;
 
 const app = express();
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, '/../public')));
 
 app.get('/api/restaurants/:id/info/', (req, res) => {

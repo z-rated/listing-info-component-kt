@@ -6,5 +6,5 @@ import store from './redux/store/store';
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>,
-  document.getElementById('app'),
+  document.getElementById('info'),
 );

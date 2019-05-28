@@ -41,6 +41,12 @@ const ChevronContainer = styled.span`
   margin-left: 7px;
 `;
 
+const I = styled.i`
+  transition: transform 0.2s;
+
+  transform: ${props => (props.timeListIsOpen ? 'rotate(-180deg)' : 'rotate(0deg)')};
+`;
+
 const isOpen = (open, close) => {
   const closeTime = close + 12;
   const date = new Date();
@@ -60,7 +66,7 @@ const OpenStatus = ({ data, day, toggleTimeList, timeListIsOpen }) => {
   return (
     <Container id="status-container" onClick={() => toggleTimeList(!timeListIsOpen)}>
       <span>
-        <Icon src="./icons/time-icon.jpg" />
+        <Icon src="http://127.0.0.1:3002/icons/time-icon.jpg" />
       </span>
       <Status>
         {
@@ -85,7 +91,7 @@ const OpenStatus = ({ data, day, toggleTimeList, timeListIsOpen }) => {
           : `Reopens at ${open}:00 AM`
         }
       </TimeContainer>
-      <ChevronContainer><i className={`fas fa-chevron-down ${timeListIsOpen ? 'up' : ''}`} /></ChevronContainer>
+      <ChevronContainer><I timeListIsOpen={timeListIsOpen} className={`fas fa-chevron-down`} /></ChevronContainer>
     </Container>
   );
 };

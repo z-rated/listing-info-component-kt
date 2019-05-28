@@ -44,7 +44,7 @@ const PhoneNumber = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="./icons/phone-icon.jpg" />
+            <Icon src="http://127.0.0.1:3002/icons/phone-icon.jpg" />
           </span>
           <PhoneContainer>
             <PhoneA href={`tel:${hrefNumber}`} data-phone-number>{data.phone}</PhoneA>

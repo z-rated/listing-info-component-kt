@@ -9,6 +9,16 @@ import MapContainer from '../redux/containers/MapContainer';
 import ModalContainer from '../redux/containers/ModalContainer';
 
 const Module = styled.div`
+  @font-face {
+    font-family: "Calibre-Regular";
+    src: url("http://127.0.0.1:3002/fonts/CalibreWeb-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Calibre-Semibold";
+    src: url("http://127.0.0.1:3002/fonts/CalibreWeb-Semibold.woff2");
+  }
+  
   padding: 32px;
   margin: 32px;
   margin-right: 150px;
@@ -18,20 +28,16 @@ const Module = styled.div`
   background-color: white;
   float: right;
   overflow: scroll;
+  font-size: 14px;
 
-  @font-face {
-    font-family: "Calibre-Regular";
-    src: url("./fonts/CalibreWeb-Regular.woff2") format("woff2");
-  }
-  
-  @font-face {
-    font-family: "Calibre-Semibold";
-    src: url("./fonts/CalibreWeb-Semibold.woff2");
-  }
+
+  font-family: "Calibre-Regular", sans-serif;
 `;
 
 const initData = (cb) => {
-  fetch(`http://127.0.0.1:3002/api/restaurants/${'100'}/info`)
+  let id = window.location.pathname.split('/restaurants/')[1];
+
+  fetch(`/restaurants/${id}/info`)
     .then(res => res.json())
     .then(data => cb(data));
 };

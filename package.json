@@ -12,7 +12,7 @@
     "build": "webpack -d -w",
     "test": "jest",
     "test:watch": "jest --verbose --watchAll",
-    "test:coverage" : "jest --coverage --colors",
+    "test:coverage": "jest --coverage --colors",
     "start": "nodemon server/index.js"
   },
   "lint-staged": {
@@ -30,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "google-map-react": "^1.1.4",
     "mongoose": "^5.5.8",

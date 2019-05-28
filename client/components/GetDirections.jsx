@@ -34,7 +34,7 @@ const Website = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="./icons/directions-icon.jpg" />
+            <Icon src="http://127.0.0.1:3002/icons/directions-icon.jpg" />
           </span>
           <GetDirectionsContainer>
             <DirA onClick={() => window.location.assign(`https://www.google.com/maps/place/${data.location.coords}`)} data-link>Get Directions</DirA>

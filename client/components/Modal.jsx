@@ -8,6 +8,7 @@ const MapDiv = styled.div`
   height: calc(100vh - 100px);
   width: calc(100vw - 200px);
   margin-bottom: 30px;
+  font-family: "Calibre-Regular", sans-serif;
 `;
 
 const MarkerContainer = styled.img`
@@ -66,6 +67,7 @@ const ButtonIcon = styled.svg`
 const Title = styled.p`
   color: white;
   font-size: 18px;
+  font-family: "Calibre-Regular", sans-serif;
 `;
 
 const CloseButton = styled.div`
@@ -81,7 +83,7 @@ const CloseButton = styled.div`
 
 const Marker = ({ text }) => (
   <div>
-    <MarkerContainer src="./icons/pin_zagat.png" alt={text} />
+    <MarkerContainer src="http://127.0.0.1:3002/icons/pin_zagat.png" alt={text} />
   </div>
 );
 
