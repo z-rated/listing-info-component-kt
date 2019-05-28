@@ -21,7 +21,12 @@ const Module = styled.div`
 
   @font-face {
     font-family: "Calibre-Regular";
-    src: url("../../public/fonts/CalibreWeb-Regular.woff2") format("woff2");
+    src: url("./fonts/CalibreWeb-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Calibre-Semibold";
+    src: url("./fonts/CalibreWeb-Semibold.woff2");
   }
 `;
 
