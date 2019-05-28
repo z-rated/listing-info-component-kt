@@ -31,7 +31,7 @@ const Module = styled.div`
 `;
 
 const initData = (cb) => {
-  fetch(`http://127.0.0.1:1234/api/restaurants/${'100'}/info`)
+  fetch(`http://127.0.0.1:3002/api/restaurants/${'100'}/info`)
     .then(res => res.json())
     .then(data => cb(data));
 };

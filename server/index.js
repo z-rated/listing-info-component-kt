@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const { getRestaurantById } = require('../db/index.js');
 
+const PORT = 3002;
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/../public')));
@@ -19,6 +21,6 @@ app.get('/api/restaurants/:id/info/', (req, res) => {
     });
 });
 
-app.listen(1234, () => {
-  console.log('Server listening on port 1234!');
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}!`);
 });
