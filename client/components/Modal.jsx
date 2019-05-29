@@ -76,10 +76,22 @@ const CloseButton = styled.div`
   right: 80px;
   width: 35px;
 
-  &:hover {
+  &:hover #background {
     fill: white;
   }
+
+  &:hover #path {
+    fill: rgb(16, 24, 32);
+  }
 `;
+
+const enableScroll = () => {
+  document.body.style['overflow-y'] = 'auto';
+};
+
+const disableScroll = () => {
+  document.body.style['overflow-y'] = 'hidden';
+};
 
 const Marker = ({ text }) => (
   <div>
@@ -88,6 +100,8 @@ const Marker = ({ text }) => (
 );
 
 const MapModal = ({ data, modalIsOpen, toggleModal }) => {
+  disableScroll();
+
   if (data) {
     const coords = MapHelpers.parseCoords(data.location.coords);
     return (
@@ -124,7 +138,7 @@ const MapModal = ({ data, modalIsOpen, toggleModal }) => {
               </g>
             </ButtonIcon>
           </GetDirectionsButton>
-          <CloseButton className="close-btn" onClick={() => { toggleModal(!modalIsOpen); }}>
+          <CloseButton className="close-btn" onClick={() => { toggleModal(!modalIsOpen); enableScroll(); }}>
             <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" version="1.1">
               <title>close</title>
               <g id="FINAL" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

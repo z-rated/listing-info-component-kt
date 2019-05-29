@@ -29,6 +29,7 @@ const Module = styled.div`
   float: right;
   overflow: scroll;
   font-size: 14px;
+  cursor: default;
 
 
   font-family: "Calibre-Regular", sans-serif;
