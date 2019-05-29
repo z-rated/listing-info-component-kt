@@ -21,7 +21,7 @@ const Module = styled.div`
   
   padding: 32px;
   margin: 32px;
-  margin-right: 150px;
+  margin-right: 40px;
   min-width: 22vw;
   max-width: 330px;
   max-height: 80vh;
@@ -36,7 +36,7 @@ const Module = styled.div`
 `;
 
 const initData = (cb) => {
-  let id = window.location.pathname.split('/restaurants/')[1];
+  const id = window.location.pathname.split('/restaurants/')[1];
 
   fetch(`/restaurants/${id}/info`)
     .then(res => res.json())
