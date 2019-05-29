@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Status = styled.div`
-  font-family: Calibre-Semibold;
+  font-family: 'Calibre-Semibold' !important;
   float: right;
   margin-top: 2px;
 `;
