@@ -28,4 +28,4 @@ dist/
 public/bundle.js
 
 # Maps Config
-maps-config.js
+client/maps-config.js
