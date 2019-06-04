@@ -9,11 +9,11 @@
   },
   "scripts": {
     "seed": "node ./db/seed.js",
-    "build": "webpack -d",
+    "build": "webpack -p",
     "test": "jest",
     "test:watch": "jest --verbose --watchAll",
     "test:coverage": "jest --coverage --colors",
-    "start": "nodemon server/index.js"
+    "start": "node server/index.js"
   },
   "lint-staged": {
     "*.js": "eslint",

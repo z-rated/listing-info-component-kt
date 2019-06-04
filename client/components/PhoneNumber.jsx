@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import CompContainer from './CompContainer';
 
 const Container = styled.div`
@@ -44,7 +44,7 @@ const PhoneNumber = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="http://127.0.0.1:3002/icons/phone-icon.jpg" />
+            <Icon src="https://zagatinfo.s3-us-west-1.amazonaws.com/phone-icon.jpg" />
           </span>
           <PhoneContainer>
             <PhoneA href={`tel:${hrefNumber}`} data-phone-number>{data.phone}</PhoneA>

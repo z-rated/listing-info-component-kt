@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/../public')));
 
+app.get('/restaurants/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../public/index.html'));
+});
+
 app.get('/api/restaurants/:id/info/', (req, res) => {
   const { id } = req.params;
 

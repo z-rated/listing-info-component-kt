@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/restaurant_info', { useNewUrlParser: true });
+mongoose.connect('mongodb://database/restaurant_info', { useNewUrlParser: true });
 const { Schema } = mongoose;
 
 const restaurantSchema = new Schema({
@@ -25,6 +25,8 @@ const restaurantSchema = new Schema({
 const Restaurant = mongoose.model('restaurants', restaurantSchema);
 
 const getRestaurantById = id => new Promise((resolve, reject) => {
+  // console.log('ID:::::::', id);
+
   Restaurant.find({ id }, (err, doc) => {
     if (err) {
       reject(err);

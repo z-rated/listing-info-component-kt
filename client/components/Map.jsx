@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
 import MapHelpers from '../map-helpers';
 import API_KEY from '../maps-config';
@@ -50,7 +50,7 @@ const ButtonIcon = styled.div`
 
 const Marker = ({ text }) => (
   <div>
-    <MarkerContainer src="http://127.0.0.1:3002/icons/pin_zagat.png" alt={text} />
+    <MarkerContainer src="https://zagatinfo.s3-us-west-1.amazonaws.com/pin_zagat.png" alt={text} />
   </div>
 );
 

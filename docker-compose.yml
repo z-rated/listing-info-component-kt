@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  info:
+    build: .
+    depends_on:
+      - 'database'
+    ports:
+      - '3002:3002'
+
+  database:
+    image: mongo:latest
+
+  mongo-seed:
+    build: db/
+    depends_on:
+      - 'database'
+    links:
+      - 'database'

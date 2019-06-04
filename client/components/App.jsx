@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import TimeListContainer from '../redux/containers/TimeListContainer';
 import AddressContainer from '../redux/containers/AddressContainer';
 import PhoneNumberContainer from '../redux/containers/PhoneNumberContainer';
@@ -11,17 +11,16 @@ import ModalContainer from '../redux/containers/ModalContainer';
 const Module = styled.div`
   @font-face {
     font-family: "Calibre-Regular";
-    src: url("http://127.0.0.1:3002/fonts/CalibreWeb-Regular.woff2") format("woff2");
+    src: url("https://zagatinfo.s3-us-west-1.amazonaws.com/CalibreWeb-Regular.woff2") format("woff2");
   }
   
   @font-face {
     font-family: "Calibre-Semibold";
-    src: url("http://127.0.0.1:3002/fonts/CalibreWeb-Semibold.woff2");
+    src: url("https://zagatinfo.s3-us-west-1.amazonaws.com/CalibreWeb-Semibold.woff2");
   }
   
   padding: 32px;
   margin: 32px;
-  margin-right: 40px;
   min-width: 22vw;
   max-width: 330px;
   max-height: 80vh;
@@ -31,14 +30,13 @@ const Module = styled.div`
   font-size: 14px;
   cursor: default;
 
-
   font-family: "Calibre-Regular", sans-serif;
 `;
 
 const initData = (cb) => {
   const id = window.location.pathname.split('/restaurants/')[1];
 
-  fetch(`/restaurants/${id}/info`)
+  fetch(`/api/restaurants/${id}/info`)
     .then(res => res.json())
     .then(data => cb(data));
 };

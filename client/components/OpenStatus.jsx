@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 
 const Container = styled.div`
   letter-spacing: .013em;
@@ -66,7 +66,7 @@ const OpenStatus = ({ data, day, toggleTimeList, timeListIsOpen }) => {
   return (
     <Container id="status-container" onClick={() => toggleTimeList(!timeListIsOpen)}>
       <span>
-        <Icon src="http://127.0.0.1:3002/icons/time-icon.jpg" />
+        <Icon src="https://zagatinfo.s3-us-west-1.amazonaws.com/time-icon.jpg" />
       </span>
       <Status>
         {

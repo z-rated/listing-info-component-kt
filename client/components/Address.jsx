@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import CompContainer from './CompContainer';
 
 const Container = styled.div`
@@ -29,7 +29,7 @@ const Address = ({ data, toggleModal, modalIsOpen }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="http://127.0.0.1:3002/icons/location-icon.jpg" />
+            <Icon src="https://zagatinfo.s3-us-west-1.amazonaws.com/location-icon.jpg" />
           </span>
           <AddressText onClick={() => { toggleModal(!modalIsOpen); }} data-address-text>
             {data.location.address}

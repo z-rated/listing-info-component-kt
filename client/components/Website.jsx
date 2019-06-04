@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import CompContainer from './CompContainer';
 
 const Container = styled.div`
@@ -34,7 +34,7 @@ const Website = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="http://127.0.0.1:3002/icons/website-icon.jpg" />
+            <Icon src="https://zagatinfo.s3-us-west-1.amazonaws.com/website-icon.jpg" />
           </span>
           <WebsiteContainer>
             <WebsiteA onClick={() => window.location.assign(`${data.website}`)} data-website>{data.website}</WebsiteA>

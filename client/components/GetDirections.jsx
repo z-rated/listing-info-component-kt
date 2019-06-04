@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// // // import styled from 'styled-components';
 import CompContainer from './CompContainer';
 
 const Container = styled.div`
@@ -34,7 +34,7 @@ const Website = ({ data }) => {
       <CompContainer>
         <Container>
           <span>
-            <Icon src="http://127.0.0.1:3002/icons/directions-icon.jpg" />
+            <Icon src="https://zagatinfo.s3-us-west-1.amazonaws.com/directions-icon.jpg" />
           </span>
           <GetDirectionsContainer>
             <DirA onClick={() => window.location.assign(`https://www.google.com/maps/place/${data.location.coords}`)} data-link>Get Directions</DirA>
