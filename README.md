@@ -16,7 +16,12 @@
 
 ## Usage
 
-> With MongoDB installed, run: 'npm run seed' to seed database with random data.
+> With MongoDB installed and mongo server listening, run: 'npm run seed' to seed database with random data.
+> API routes
+  - GET    - /api/restaurants/:id/info
+  - POST   - /api/restaurants/info
+  - PUT    - /api/restaurants/:id/info
+  - DELETE - /api/restaurants/:id/info
 
 ## Requirements
 
@@ -42,5 +47,9 @@ From within the root directory:
 ```sh
 npm install -g webpack
 npm install
+start mongo server in a new terminal "mongod"
+npm run seed
+npm run build
+npm start
 ```
 

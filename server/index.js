@@ -15,7 +15,7 @@ app.get('/restaurants/:id', (req, res) => {
   res.sendFile(path.join(__dirname, '/../public/index.html'));
 });
 
-app.get('/api/restaurants/:id/info/', (req, res) => {
+app.get('/api/restaurants/:id/info', (req, res) => {
   const { id } = req.params;
 
   getRestaurantById(id)
@@ -25,6 +25,18 @@ app.get('/api/restaurants/:id/info/', (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+});
+
+app.post('/api/restaurants/info', () => {
+// create a new item
+});
+
+app.put('/api/restaurants/:id/info', () => {
+// update an item
+});
+
+app.delete('/api/restaurants/:id/info', () => {
+// delete an item
 });
 
 app.listen(PORT, () => {

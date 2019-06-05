@@ -36,4 +36,18 @@ const getRestaurantById = id => new Promise((resolve, reject) => {
   });
 });
 
-module.exports = { getRestaurantById };
+const addRestaurantInfo = dataObject => new Promise((resolve, reject) => {
+  Restaurant.insertOne();
+});
+
+const deleteRestaurantInfo = id => new Promise((resolve, reject) => {
+  Restaurant.deleteOne();
+});
+
+const updateRestaurantInfo = dataObject => new Promise((resolve, reject) => {
+  Restaurant.updateOne();
+});
+
+module.exports = {
+  getRestaurantById, addRestaurantInfo, deleteRestaurantInfo, updateRestaurantInfo,
+};
