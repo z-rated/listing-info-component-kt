@@ -31,4 +31,4 @@ public/bundle.js
 client/maps-config.js
 
 # CSV Data File
-db/data-doc.csv
+db/nested-data-doc.csv
