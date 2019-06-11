@@ -31,4 +31,6 @@ public/bundle.js
 client/maps-config.js
 
 # CSV Data File
-db/nested-data-doc.csv
+db/nested-data-doc.
+
+db/postgres/postgres_config.js
