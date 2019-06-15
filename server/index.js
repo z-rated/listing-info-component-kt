@@ -1,15 +1,19 @@
 /* eslint-disable no-console */
+const nr = require('newrelic');
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 // const { getRestaurantById } = require('../db/index.js');
-const { getRestaurantById } = require('../db/postgres/index.js');
+const { getRestaurantById, addRestaurantInfo, deleteRestaurantInfo, updateRestaurantInfo } = require('../db/postgres/index.js');
 
 const PORT = 3002;
 
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
+
 app.use(express.static(path.join(__dirname, '/../public')));
 
 app.get('/restaurants/:id', (req, res) => {
@@ -66,23 +70,58 @@ app.get('/api/restaurants/:id/info', (req, res) => {
         phone: data.phonenumber,
         website: data.website,
       };
+      // console.log(id);
+      res.status(200);
       res.send(parsedData);
     })
     .catch((err) => {
-      console.log(err);
+      res.status(500);
+      res.send(err);
+      // console.log(err);
     });
 });
 
-app.post('/api/restaurants/info', () => {
+app.post('/api/restaurants/info', (req, res) => {
 // create a new item
+  // console.log('REQ SENT WITH POST: ', req.body);
+  addRestaurantInfo(req.body)
+    .then(() => {
+      console.log('Successfully posted to database');
+      res.status(201);
+      res.end();
+    })
+    .catch((err) => {
+      console.log('ERROR posting to DB: ', err);
+      res.status(500);
+      res.send(err);
+    });
 });
 
-app.put('/api/restaurants/:id/info', () => {
+app.put('/api/restaurants/:id/info', (req, res) => {
 // update an item
+  updateRestaurantInfo(req.body)
+    .then(() => {
+      console.log('Successfully updated record in DB');
+      res.end();
+    })
+    .catch((err) => {
+      console.log('ERROR updating record in DB: ', err);
+      res.send(err);
+    });
 });
 
-app.delete('/api/restaurants/:id/info', () => {
+app.delete('/api/restaurants/:id/info', (req, res) => {
 // delete an item
+  const { id } = req.params;
+  deleteRestaurantInfo(id)
+    .then(() => {
+      console.log('Successfully deleted record');
+      res.end();
+    })
+    .catch((err) => {
+      console.log('ERROR deleting record: ', err);
+      res.send(err);
+    });
 });
 
 app.listen(PORT, () => {
